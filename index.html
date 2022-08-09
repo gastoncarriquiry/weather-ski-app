@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherSki Service</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="img/logo.png" alt="Logo WeatherSki Service®"></a>
+    </header>
+    <main>
+        <div id="cont-central">
+            <h1>Bienvenido/a a WeatherSki Service®</h1>
+            <p>
+                WeatherSki® es un servicio que permite buscar 2 de los mejores destinos nevados y compararlos. Los
+                resultados contienen el pronóstico para los próximos 7 días y una evaluación para determinar cuál es el
+                mejor lugar para esquiar. El mayor beneficio de este servicio es que hace la comparación por usted según
+                las probabilidades de una nevada (precipitaciones), la temperatura mínima y el viento. Todo está pensado
+                para que se relaje
+                y tenga sus vacaciones ideales en la nieve.
+            </p>
+            <div id="searchDestinos">
+                <div id="inputs">
+                    <fieldset>
+                        <label for="destino1">Destino 1:</label>
+                        <select name="Destinos 1" id="destino1" required>
+                            <option value="" selected hidden>Seleccione un destino</option>
+                            <option value="disabled" disabled>--Seleccione un destino--</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <label for="destino2">Destino 2:</label>
+                        <select name="Destinos 2" id="destino2" required>
+                            <option value="" selected hidden>Seleccione un destino</option>
+                            <option value="disabled" disabled>--Seleccione un destino--</option>
+                        </select>
+                    </fieldset>
+                    <p id="error404">Lo sentimos , algo salió mal. Intente de nuevo más tarde</p>
+                </div>
+                <button id="btn_comparar">Comparar Destinos <img src="img/loader.gif" alt="Cargando..."
+                        id="loader"></button>
+            </div>
+            <section id="resultadoComparacion">
+            </section>
+        </div>
+        <section id="cardDestino1" class="destino">
+            <div id="cont-diarios1">
+            </div>
+        </section>
+        <section id="cardDestino2" class="destino">
+            <div id="cont-diarios2">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Sitio diseñado por Gaston Carriquiry (230498)</p>
+        <p>API obtenida de <a href="https://openweathermap.org/api/one-call-api" target="_blank">OpenWeather</a></p>
+    </footer>
+    <script src="js/array.js"></script>
+    <script src="js/code.js"></script>
+</body>
+
+</html>
